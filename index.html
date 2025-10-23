@@ -2,11 +2,11 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Мій сайт на GitHub Pages</title>
+  <title>:D</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f9fafb;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,12 +15,12 @@
       flex-direction: column;
     }
     img {
-      max-width: 400px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 480px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
       margin-top: 20px;
       opacity: 0;
-      transition: opacity 1s ease-in;
+      transition: opacity 1s ease-in-out;
     }
     img.loaded {
       opacity: 1;
@@ -28,14 +28,15 @@
   </style>
 </head>
 <body>
-  <h1>Привіт із GitHub Pages 🚀</h1>
-  <img id="mainImage" src="" alt="Зображення завантажується...">
+  <h1></h1>
+  <p></p>
+  <img id="mainImage" src="" alt="Картинка завантажується...">
 
   <script>
-    // URL картинки (можеш замінити на свою)
-    const imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Example.jpg/800px-Example.jpg";
-    
-    // Завантажуємо зображення
+    // Вказуємо твоє зображення з репозиторію
+    const imageUrl = "./861gk9gqka0c1.png";
+
+    // Завантаження зображення
     const img = document.getElementById("mainImage");
     const preload = new Image();
     preload.src = imageUrl;
