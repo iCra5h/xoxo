@@ -2,9 +2,47 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Мій сайт</title>
+  <title>Мій сайт на GitHub Pages</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    img {
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+    img.loaded {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-  <h1>Привіт, GitHub Pages!</h1>
+  <h1>Привіт із GitHub Pages 🚀</h1>
+  <img id="mainImage" src="" alt="Зображення завантажується...">
+
+  <script>
+    // URL картинки (можеш замінити на свою)
+    const imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Example.jpg/800px-Example.jpg";
+    
+    // Завантажуємо зображення
+    const img = document.getElementById("mainImage");
+    const preload = new Image();
+    preload.src = imageUrl;
+    preload.onload = () => {
+      img.src = imageUrl;
+      img.classList.add("loaded");
+    };
+  </script>
 </body>
-</html> 
+</html>
